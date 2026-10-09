@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Eco em Foco: educação sobre emissões de carbono, ambiente e impacto social."
+    />
+    <meta name="theme-color" content="#153b2d" />
+    <title>Contato | Eco em Foco</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+
+</head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Eco em Foco, página inicial"
+          ><span class="brand-mark" aria-hidden="true">e</span
+          ><span class="brand-text">eco em foco</span></a
+        >
+        <details class="mobile-nav" open>
+          <summary aria-label="Abrir menu de navegação">Menu</summary>
+          <nav
+            class="main-nav"
+            id="menu-principal"
+            aria-label="Navegação principal"
+          >
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="impacto.html">Impacto</a>
+            <a href="acessibilidade.html">Acessibilidade</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="midia.html">Mídia</a>
+            <a href="noticias.html">Notícias</a>
+            <a href="contato.html" aria-current="page">Contato</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="page-hero">
+        <p class="eyebrow eyebrow-dark">08 / conversa aberta</p>
+        <h1>Tem uma pergunta, sugestão ou barreira para relatar?</h1>
+        <p class="page-intro">
+          Este formulário demonstra validação HTML5 no navegador. Como o projeto
+          é estático e escolar, não envia nem armazena os dados em servidor.
+        </p>
+      </section>
+      <section class="section contact-layout">
+        <div class="contact-aside">
+          <p class="eyebrow eyebrow-dark">Dados de demonstração</p>
+          <h2>Eco em Foco</h2>
+          <p>Equipe escolar UNICID<br />São Paulo — SP · atendimento online</p>
+
+          <p class="small-note">Me mande um oi!</p>
+
+          <div class="team-note">
+            <h3>Integrantes</h3>
+            <p>Adrian Crisitan dos Santos - RGM: 47567210</p>
+            <p>Cicero Kauê Alvez da Silva - RGM: 48225096</p>
+            <p>Emylly Nickolly Viana de Oliveira - RGM: 47642785</p>
+            <p>Larissa Penha Francisco. - RGM: 48065960</p>
+            <p>Maria Fernanda Martins Vaz - RGM: 47598964 </p>
+            
+          </div>
+
+        </div>
+        <form class="contact-form" aria-label="Formulário de contato">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="nome"
+                >Nome completo <span aria-hidden="true">*</span></label
+              ><input
+                id="nome"
+                name="nome"
+                type="text"
+                autocomplete="name"
+                required
+                minlength="2"
+                placeholder="Como podemos chamar você?"
+                alt="Campo para nome"
+              />
+            </div>
+            <div class="form-field">
+              <label for="email">E-mail <span aria-hidden="true">*</span></label
+              ><input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                placeholder="voce@exemplo.com"
+                alt="Campo para email"
+              />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="telefone">Telefone (opcional)</label
+              ><input
+                id="telefone"
+                name="telefone"
+                type="tel"
+                autocomplete="tel"
+                inputmode="tel"
+                pattern="[0-9()+ .-]{8,20}"
+                aria-describedby="telefone-ajuda"
+                placeholder="(11) 99999-9999"
+                alt="Campo para telefone"
+              />
+              <small id="telefone-ajuda"
+                >Use números, espaço, parênteses, +, ponto ou hífen.
+              </small>
+            </div>
+            <div class="form-field">
+              <label for="data-contato">Data preferencial</label
+              ><input id="data-contato" name="data-contato" type="date" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="quantidade">Quantidade de pessoas envolvidas</label
+              ><input
+                id="quantidade"
+                name="quantidade"
+                type="number"
+                min="1"
+                max="1000"
+                step="1"
+                placeholder="Ex.: 25"
+                alt="Informe a quantidade de pessoas"
+              />
+            </div>
+            <div class="form-field">
+              <label for="assunto"
+                >Assunto <span aria-hidden="true">*</span></label
+              ><select id="assunto" name="assunto" required>
+                <option value="">Selecione uma opção</option>
+                <option value="duvida">Dúvida sobre carbono e clima</option>
+                <option value="acessibilidade">
+                  Acessibilidade ou inclusão
+                </option>
+                <option value="sugestao">Sugestão de conteúdo</option>
+                <option value="outro">Outro assunto</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="mensagem"
+              >Mensagem <span aria-hidden="true">*</span></label
+            ><textarea
+              id="mensagem"
+              name="mensagem"
+              rows="5"
+              required
+              minlength="10"
+              placeholder="Escreva sua mensagem (mínimo de 10 caracteres)."
+              alt="Mensagem"
+            ></textarea>
+          </div>
+          <div class="form-consent">
+            <input
+              id="consentimento"
+              name="consentimento"
+              type="checkbox"
+              alt="Consentimento"
+              required/>
+              <label for="consentimento">
+              Entendo que esta é uma demonstração local e que a mensagem não
+              será enviada nem armazenada.
+              <span aria-hidden="true">*</span>
+            </label>
+          </div>
+          <button class="button button-dark" type="submit">
+            Validar demonstração <span aria-hidden="true">↗</span>
+          </button>
+          <p
+            id="form-feedback"
+            class="form-feedback"
+            role="status"
+            aria-live="polite">
+          </p>
+          <p class="small-note">
+            Campos marcados com * são obrigatórios. A confirmação na tela
+            demonstra o comportamento do formulário, não um envio de dados.
+          </p>
+
+        </form>
+        <p class="form-static-note">
+          Este formulário usa validação HTML5 nativa do navegador e funciona
+          como demonstração local.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <a class="brand footer-brand" href="index.html">
+            <span class="brand-mark" aria-hidden="true">e</span>
+            <span class="brand-text">eco em foco</span>
+          </a>
+          <p>
+            Entender as emissões. Acompanhar o ambiente. Cuidar das pessoas.
+          </p>
+        </div>
+        <nav class="footer-links" aria-label="Navegação no rodapé">
+          <a href="index.html">Início</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="impacto.html">Impacto</a>
+          <a href="acessibilidade.html">Acessibilidade</a>
+          <a href="galeria.html">Galeria</a>
+          <a href="midia.html">Mídia</a>
+          <a href="noticias.html">Notícias</a>
+          <a href="contato.html" aria-current="page">Contato</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        Projeto acadêmico fictício de Front-End · conteúdo educativo com fontes
+        identificadas · dados consultados em 25/09/2026.
+      </div>
+    </footer>
+  </body>
+</html>

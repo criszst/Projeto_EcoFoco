@@ -1,0 +1,723 @@
+/*
+  Eco em Foco — CSS global
+  Este arquivo organiza a aparência do site em blocos.
+  Cada seção abaixo explica uma parte da página e como ela funciona.
+*/
+
+/*
+  1) Importação de fontes e variáveis
+  Aqui definimos a paleta de cores e os tipos usados no projeto.
+  O tema é verde e terracota, com sensação de natureza, clima e acolhimento.
+*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap');
+
+:root {
+  --forest: #153b2d;
+  --forest-deep: #0e2b21;
+  --leaf: #53785e;
+  --cream: #f6f3e9;
+  --paper: #fffdf7;
+  --mist: #e8eee5;
+  --ink: #1d3027;
+  --muted: #5b6d62;
+  --lime: #d2e16c;
+  --rust: #b95d3f;
+  --line: #d5ddcf;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'DM Sans', Arial, sans-serif;
+  --content: 1180px;
+  --ease: cubic-bezier(.23, 1, .32, 1);
+}
+
+/*
+  2) Reset e base da página
+  Este bloco limpa margens e paddings padrões do navegador.
+  Também define a fonte principal e a cor de fundo do site.
+*/
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 16px/1.65 var(--sans);
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+img {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: .2em;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+
+:focus-visible {
+  outline: 3px solid #a14827;
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+
+::selection {
+  background: var(--lime);
+  color: var(--forest-deep);
+}
+
+/*
+  3) Skip link
+  Esse atalho ajuda quem usa teclado a pular direto para o conteúdo principal.
+  Sem ele, a navegação por teclado fica mais cansativa.
+*/
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -8rem;
+  z-index: 100;
+  background: var(--lime);
+  color: var(--forest-deep);
+  padding: .8rem 1rem;
+  font-weight: 700;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/*
+  4) Cabeçalho e navegação principal
+  O header fica fixo no topo para manter o menu sempre acessível.
+*/
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid rgba(19, 61, 47, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.header-inner {
+  max-width: var(--content);
+  margin: auto;
+  /* O padding cria espaço entre o conteúdo e as bordas do cabeçalho. */
+  padding: .75rem 1.5rem;
+  /* O display flex coloca a marca e o menu na mesma linha. */
+  display: flex;
+  /* align-items center alinha os elementos pelo centro vertical. */
+  align-items: center;
+  /* Separa a marca do menu e distribui o espaço disponível. */
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.brand {
+  /* inline-flex mantém a marca em linha e permite alinhar seus elementos internos. */
+  display: inline-flex;
+  align-items: center;
+  /* gap cria distância entre o símbolo e o nome do site. */
+  gap: .7rem;
+  /* margin-right auto empurra o menu para o lado direito. */
+  margin-right: auto;
+  text-decoration: none;
+  color: var(--forest);
+  font-weight: 700;
+  letter-spacing: -.04em;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50% 50% 50% 8%;
+  background: var(--forest);
+  color: var(--lime);
+  font: 700 1.3rem var(--serif);
+  transform: rotate(-8deg);
+}
+
+.brand-text {
+  font-size: 1.05rem;
+}
+
+.main-nav {
+  /* flex organiza os links do menu lado a lado. */
+  display: flex;
+  align-items: center;
+  /* gap controla o pequeno espaço entre cada link. */
+  gap: .18rem;
+}
+
+.main-nav a {
+  /* padding aumenta a área clicável do link. */
+  padding: .62rem .72rem;
+  /* Um valor grande deixa as bordas do link arredondadas. */
+  border-radius: 99px;
+  color: #43594c;
+  text-decoration: none;
+  font-size: .79rem;
+  font-weight: 600;
+  transition: background .18s var(--ease), color .18s var(--ease), box-shadow .18s var(--ease);
+}
+
+.main-nav a:hover {
+  background: var(--mist);
+  color: var(--forest);
+}
+
+.main-nav a[aria-current="page"] {
+  background: var(--forest);
+  color: var(--lime);
+  box-shadow: inset 0 0 0 1px rgba(210, 225, 108, .25);
+}
+
+.main-nav a[aria-current="page"]:hover {
+  background: var(--forest);
+  color: var(--lime);
+}
+
+.nav-toggle {
+  display: none;
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  padding: .58rem .85rem;
+  background: var(--paper);
+  color: var(--forest);
+  font-weight: 700;
+}
+
+/*
+  5) Tipografia e layout geral
+  Aqui ajustamos títulos, parágrafos, rótulos e limites de largura das seções.
+  Isso cria uma leitura mais confortável e uniforme em todas as páginas.
+*/
+main {
+  min-height: 60vh;
+}
+
+.container {
+  width: min(var(--content), 100% - 3rem);
+  margin-inline: auto;
+}
+
+.eyebrow {
+  margin: 0 0 .85rem;
+  color: #d9e58a;
+  font-size: .69rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.eyebrow-dark {
+  color: var(--leaf);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--serif);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -.035em;
+  color: var(--forest);
+}
+
+h1 {
+  font-size: clamp(2.8rem, 6.1vw, 5.4rem);
+  max-width: 16ch;
+  margin: .2rem 0 1.3rem;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin: .25rem 0 1rem;
+}
+
+h3 {
+  font-size: 1.45rem;
+  margin: .3rem 0 .7rem;
+}
+
+p {
+  margin: .4rem 0 1rem;
+}
+
+.small-note {
+  color: var(--muted);
+  font-size: .84rem;
+}
+
+.section {
+  max-width: var(--content);
+  margin: 0 auto;
+  padding: 5.5rem 1.5rem;
+}
+
+.page-hero {
+  max-width: var(--content);
+  margin: auto;
+  padding: 5.2rem 1.5rem 3.2rem;
+  background: radial-gradient(ellipse at 88% 12%, rgba(210, 225, 108, .28), transparent 34%);
+}
+
+.page-hero h1 {
+  font-size: clamp(2.7rem, 5.5vw, 4.6rem);
+  max-width: 18ch;
+}
+
+.page-intro {
+  max-width: 62ch;
+  color: var(--muted);
+  font-size: 1.12rem;
+}
+
+/*
+  6) Hero da página inicial
+  O hero é o grande bloco de apresentação do site.
+  Ele combina texto, imagem e etiqueta para dar visibilidade ao tema principal.
+*/
+.hero {
+  position: relative;
+  overflow: hidden;
+  /* O grid divide o hero em uma área de texto e outra de imagem. */
+  display: grid;
+  grid-template-columns: 1.02fr .98fr;
+  /* min-height evita que o bloco fique baixo demais em telas grandes. */
+  min-height: 590px;
+  background: var(--forest);
+  color: #f8f5e9;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 52% 0 0;
+  background: radial-gradient(circle at 12% 90%, rgba(210, 225, 108, .16), transparent 45%);
+  pointer-events: none;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  align-self: center;
+  max-width: 760px;
+  padding: 5rem max(2rem, calc((100vw - var(--content)) / 2)) 5rem max(1.5rem, calc((100vw - var(--content)) / 2));
+}
+
+.hero h1 {
+  color: #fffdf4;
+  max-width: 11ch;
+  font-size: clamp(3rem, 6vw, 5.6rem);
+}
+
+.hero h1 em {
+  color: var(--lime);
+  font-style: normal;
+}
+
+.hero-lede {
+  max-width: 50ch;
+  color: #e4ecde;
+  font-size: 1.08rem;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin: 1.8rem 0;
+}
+
+.hero-note {
+  color: #becfc0;
+  font-size: .82rem;
+}
+
+.hero-photo {
+  position: relative;
+  min-height: 470px;
+  margin: 2.5rem 2.5rem 2.5rem 0;
+  overflow: hidden;
+  border-radius: 3rem 1rem 3rem 1rem;
+  background: #47664e;
+}
+
+.hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: 40% 0 0;
+  background: linear-gradient(transparent, rgba(7, 29, 20, .75));
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+}
+
+.hero-photo figcaption {
+  position: absolute;
+  z-index: 1;
+  left: 1.5rem;
+  right: 1.5rem;
+  bottom: 1.3rem;
+  color: white;
+  font-size: .82rem;
+}
+
+.hero-stamp {
+  position: absolute;
+  right: 90%;
+  bottom: 5rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  padding: .8rem 1rem;
+  background: var(--lime);
+  color: var(--forest-deep);
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.hero-stamp span:first-child {
+  font: 600 1.35rem var(--serif);
+}
+
+/*
+  7) Botões e links de ação
+  Esses estilos deixam ações importantes destacadas e fáceis de clicar.
+  Eles servem para chamar atenção para páginas, links e chamadas de ação.
+*/
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .7rem;
+  min-height: 48px;
+  padding: .78rem 1.15rem;
+  border: 1px solid transparent;
+  border-radius: 99px;
+  font-size: .9rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .16s var(--ease), background .18s var(--ease), color .18s var(--ease);
+}
+
+.button:active {
+  transform: scale(.97);
+}
+
+.button-light {
+  background: var(--lime);
+  color: var(--forest-deep);
+}
+
+.button-light:hover {
+  background: #e2ee90;
+}
+
+.button-dark {
+  background: var(--forest);
+  color: #fff;
+}
+
+.button-dark:hover {
+  background: #275640;
+}
+
+.button-outline {
+  border-color: #b4c9b7;
+  color: white;
+  background: transparent;
+}
+
+.button-outline:hover {
+  background: rgba(255, 255, 255, .1);
+}
+
+.text-link {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.text-link-light {
+  color: white;
+}
+
+.arrow-link {
+  display: inline-flex;
+  gap: .5rem;
+  color: var(--forest);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.arrow-link:hover,
+.rich-copy a:hover {
+  text-decoration: underline;
+}
+
+/*
+  8) Cartões e métricas
+  Essa parte organiza dados e blocos de informação em cartões.
+  É útil para mostrar indicadores, valores e conteúdos em coluna visualmente equilibrada.
+*/
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr .8fr;
+  gap: 3rem;
+  align-items: end;
+  padding-bottom: 2.2rem;
+}
+
+.intro-grid h2 {
+  max-width: 18ch;
+}
+
+.section-lede {
+  max-width: 55ch;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.metrics {
+  max-width: var(--content);
+  margin: 0 auto;
+  padding: 0 1.5rem 4.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.metric-card {
+  position: relative;
+  padding: 1.7rem;
+  background: #f2f4eb;
+  border-radius: 1.1rem;
+  min-height: 255px;
+}
+
+.metric-card-accent {
+  background: var(--forest);
+  color: #f8f5e9;
+}
+
+.metric-index {
+  display: block;
+  color: var(--leaf);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.metric-card-accent .metric-index {
+  color: var(--lime);
+}
+
+.metric-card strong {
+  display: block;
+  margin: .8rem 0 .4rem;
+  color: var(--forest);
+  font: 600 clamp(2.5rem, 4vw, 3.7rem)/1 var(--serif);
+  letter-spacing: -.05em;
+}
+
+.metric-card-accent strong {
+  color: #fff;
+}
+
+.metric-card strong small {
+  font: 500 .36em var(--sans);
+  letter-spacing: 0;
+}
+
+.metric-card p {
+  max-width: 33ch;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.metric-card-accent p {
+  color: #dce6da;
+}
+
+.metric-card > a {
+  font-size: .8rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.metric-card sup {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+}
+
+/*
+  9) Faixas de destaque e blocos de chamada
+  Essas seções ajudam a separar uma ideia forte do restante do conteúdo.
+  Eles servem para reforçar valores ambientais e sociais.
+*/
+.split-callout {
+  display: grid;
+  grid-template-columns: .28fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  padding-top: 4rem;
+  padding-bottom: 5.5rem;
+}
+
+.split-callout h2 {
+  max-width: 21ch;
+}
+
+.split-callout p:not(.eyebrow) {
+  max-width: 68ch;
+  color: var(--muted);
+}
+
+.callout-mark {
+  display: grid;
+  place-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background: var(--lime);
+  color: var(--forest);
+  font: 2rem var(--serif);
+}
+
+.dark-band {
+  max-width: none;
+  padding: 4.4rem max(1.5rem, calc((100vw - var(--content)) / 2));
+  background: var(--forest);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.dark-band h2 {
+  max-width: 19ch;
+  color: white;
+}
+
+.dark-band p:not(.eyebrow) {
+  max-width: 52ch;
+  color: #dbe5db;
+}
+
+.source-strip {
+  display: grid;
+  grid-template-columns: .8fr 1fr;
+  gap: 1rem 3rem;
+}
+
+.source-strip h2 {
+  font-size: 2.4rem;
+}
+
+.source-list {
+  margin: .2rem 0;
+  padding-left: 1.4rem;
+}
+
+.source-list li {
+  margin: 0 0 .75rem;
+}
+
+.source-list a {
+  color: var(--forest);
+}
+
+.source-strip .small-note {
+  grid-column: 2;
+}
+
+.site-footer {
+  background: var(--forest-deep);
+  color: #e6ede5;
+}
+
+.footer-inner {
+  max-width: var(--content);
+  margin: auto;
+  padding: 3rem 1.5rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 3rem;
+}
+
+.footer-brand {
+  color: white;
+}
+
+.footer-inner p {
+  max-width: 46ch;
+  color: #c5d2c5;
+  font-size: .85rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  gap: .4rem 1rem;
+}
+
+.footer-links a {
+  color: #e6ede5;
+  font-size: .82rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  max-width: var(--content);
+  margin: auto;
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, .2);
+  color: #c5d2c5;
+  font-size: .75rem;
+}
