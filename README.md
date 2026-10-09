@@ -2,6 +2,9 @@
 
  Site educativo sobre sustentabilidade emissoes de carbono e impacto social.
 
+ Link para o site público: 
+ <a href="https://projetoecofoco-production.up.railway.app/">Projeto Em Foco</a>
+
 ## Equipe
 
 Adrian Crisitan dos Santos - RGM: 47567210
