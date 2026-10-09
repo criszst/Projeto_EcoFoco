@@ -3,7 +3,7 @@
  Site educativo sobre sustentabilidade emissoes de carbono e impacto social.
 
  Link para o site público: 
- <a href="ecofoco.up.railway.app">Projeto Em Foco</a>
+ <a href="https://ecofoco.up.railway.app/">Projeto Em Foco</a>
 
 ## Equipe
 
