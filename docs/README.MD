@@ -30,7 +30,7 @@ Criar um site educativo, acessivel e resposivel
 
 Todas as paginas dão acesso ao menu principal e ao rodapé com links de navegação.
 
-### tecnologia e ferramentas
+### Tecnologia e ferramentas
 
 - HTML5
 - CSS
@@ -56,7 +56,7 @@ O logotipo textual "Eco em Foco" aparece no cabeçalho e rodapé.
 Imagens e materias tem creditos ou link para suas fontes nas páginas correspondentes.
 
 ### Critérios de aceitção 
- -O formulário apresenta validaão html 5
+- O formulário apresenta validação HTML 5
 - A imagem tem texto alternativo e fontes identificadas
 - A navegação pode ser realizada pelo teclado.
 
@@ -66,9 +66,9 @@ Site institucional estático, sem banco de dados e sem integrações complexas.
 
 GitHub Pages - Netlify - Versel
 
-### Verificação realizadas
+### Verificações realizadas
 
--Somente o inicio e o contato estão ativos;
+- Somente o inicio e o contato estão ativos;
 - Navegação principal visivel no topo das paginas;
 - Logo e menu alinhado corretamente;
 - Estrutura HTML e recursos básicos.
@@ -93,5 +93,5 @@ GitHub Pages - Netlify - Versel
 ### Etapa 4 - Ajustes  finais 
 
 - Correção de menu que estava torto.
-- adicionamos um arquivo music, para implementação de audio futuramente.
+- Adicionamos um arquivo music em "assets/", para implementação de audio futuramente.
 
