@@ -721,3 +721,88 @@ p {
   color: #c5d2c5;
   font-size: .75rem;
 }
+ 10) Blocos de texto e lista de valores
+  Ficam aqui os estilos das páginas “Sobre”, “Projetos” e similares.
+  O objetivo é manter textos legíveis e bem estruturados.
+*/
+.about-layout,
+.two-column {
+  display: grid;
+  grid-template-columns: .8fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-layout h2,
+.two-column h2 {
+  max-width: 15ch;
+}
+
+.rich-copy {
+  max-width: 68ch;
+  color: #42564a;
+}
+
+.rich-copy p {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.values-grid article {
+  padding: 1.6rem;
+  border-top: 2px solid var(--leaf);
+  background: linear-gradient(180deg, #eff3e9, transparent);
+}
+
+.value-number {
+  color: var(--rust);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+
+.quote-panel {
+  max-width: none;
+  background: var(--mist);
+  text-align: center;
+  padding-inline: max(1.5rem, calc((100vw - 860px) / 2));
+}
+
+.quote-panel blockquote {
+  margin: 0;
+  color: var(--forest);
+  font: 500 clamp(1.8rem, 4vw, 3rem)/1.2 var(--serif);
+}
+
+.quote-panel p {
+  margin: 1.2rem 0 0;
+  color: var(--muted);
+  font-size: .85rem;
+}
+
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.check-list li {
+  padding: .85rem 0 .85rem 2rem;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+
+.check-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--leaf);
+  font-weight: 700;
+}
