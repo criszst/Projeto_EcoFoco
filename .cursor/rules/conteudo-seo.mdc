@@ -1,0 +1,32 @@
+---
+description: Conteúdo educativo, créditos de mídia e SEO básico
+alwaysApply: true
+---
+
+# Conteúdo, créditos e SEO básico
+
+Textos educativos e explicativos: carbono, clima, energia, consumo, mobilidade e impacto social. Evite tom alarmista ou comercial. Projeto acadêmico fictício; dados com fonte e data quando houver números.
+
+- `meta name="description"` específica da página (até ~160 caracteres).
+- `title` único: `Página | Eco em Foco`. `theme-color` `#153b2d`.
+- Um `h1` por página. Hierarquia `h2`/`h3` sem pular níveis.
+- Imagens e materiais: crédito ou link da fonte na própria página (`figcaption` ou nota).
+- Equipe (contato/sobre), não altere RGMs: Adrian, Cícero Kauê, Emylly, Larissa, Maria Fernanda.
+
+```html
+<!-- ❌ BAD -->
+<title>Página</title>
+<img src="https://commons.wikimedia.org/..." alt="foto">
+
+<!-- ✅ GOOD -->
+<meta name="description"
+      content="Eco em Foco: educação sobre emissões de carbono, ambiente e impacto social.">
+<title>Impacto | Eco em Foco</title>
+<figure>
+  <img src="..." alt="Usina solar conectada à rede">
+  <figcaption>
+    Wikimedia Commons —
+    <a href="https://commons.wikimedia.org/wiki/...">arquivo original</a>.
+  </figcaption>
+</figure>
+```

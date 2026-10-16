@@ -1,0 +1,29 @@
+---
+description: Acessibilidade — teclado, skip-link, alt em imagens, landmarks e inclusão
+alwaysApply: true
+---
+
+# Acessibilidade
+
+Critérios do README: navegação por teclado, imagens com texto alternativo, inclusão visível no conteúdo. Sustentabilidade no tema também significa participação social, não só “verde”.
+
+- Skip-link visível no `:focus`, apontando para `#conteudo`.
+- Foco visível: o CSS já usa `:focus-visible`; não remova `outline`.
+- Landmarks: `header`, `nav` com `aria-label`, `main`, `footer`. Seções com título (`h1`–`h3`) ou `aria-labelledby`.
+- Imagens informativas: `alt` descritivo em português. Decorativas: `alt=""` e, se for marca, `aria-hidden="true"`.
+- Não dependa só de cor. Controles clicáveis também acessíveis por Tab e Enter/Espaço.
+- Preferir HTML semântico a `div`+`onclick`.
+
+```html
+<!-- ❌ BAD -->
+<img src="solar.jpg">
+<div onclick="location.href='sobre.html'">Sobre</div>
+
+<!-- ✅ GOOD -->
+<a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+<img src="solar.jpg" width="886" height="621"
+     alt="Painéis solares e turbinas eólicas ligados à rede elétrica">
+<figure>
+  <figcaption>Fonte: Wikimedia Commons — créditos na página.</figcaption>
+</figure>
+```

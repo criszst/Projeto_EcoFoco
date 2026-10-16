@@ -1,0 +1,29 @@
+---
+description: Estrutura HTML compartilhada — head, skip-link, header, nav, main e footer
+alwaysApply: true
+---
+
+# Estrutura HTML das páginas
+
+Toda página usa o mesmo esqueleto: skip-link, `header.site-header` com marca e menu, `main#conteudo`, `footer.site-footer` com os mesmos links. Mantenha classes e ordem iguais às de `index.html`.
+
+Páginas: `index.html`, `sobre.html`, `projetos.html`, `impacto.html`, `acessibilidade.html`, `galeria.html`, `midia.html`, `noticias.html`, `contato.html`.
+
+- `lang="pt-BR"`, charset UTF-8, viewport, `theme-color` `#153b2d`, CSS em `css/styles.css`.
+- Título: `Nome da página | Eco em Foco`.
+- Marca: `aria-label="Eco em Foco, página inicial"`; `brand-mark` com `aria-hidden="true"`.
+- Nav: `id="menu-principal"`, `aria-label="Navegação principal"`; página atual com `aria-current="page"`.
+- Menu móvel: `details.mobile-nav` + `summary`. Rodapé: `nav.footer-links` com `aria-label="Navegação no rodapé"`.
+
+```html
+<!-- ❌ BAD: main sem id, menu incompleto, marca só no header -->
+<main>
+  <nav><a href="index.html">Home</a></nav>
+
+<!-- ✅ GOOD -->
+<a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+<main id="conteudo">
+  <nav class="main-nav" id="menu-principal" aria-label="Navegação principal">
+    <a href="contato.html" aria-current="page">Contato</a>
+  </nav>
+```

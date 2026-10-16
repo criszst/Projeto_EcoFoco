@@ -1,0 +1,25 @@
+---
+description: Identidade do Eco em Foco — tema, stack, tom de voz e limites do site estático
+alwaysApply: true
+---
+
+# Eco em Foco — identidade do projeto
+
+Site educativo acadêmico sobre emissões de carbono, mudanças climáticas, sustentabilidade e impacto social. Linguagem simples, tom educativo, direto e acolhedor. Inclui inclusão, acessibilidade e participação social.
+
+- Marca textual: **Eco em Foco** (cabeçalho e rodapé).
+- Idioma: `pt-BR`. Stack: HTML5 + CSS em `css/styles.css`. Sem backend, banco ou envio real de dados.
+- Hospedagem prevista: site estático (GitHub Pages, Netlify ou Vercel).
+- Não introduzir frameworks JS, APIs ou autenticação sem pedido explícito.
+- Áudio futuro: arquivo em `assets/`; não inventar player sem o recurso existir.
+
+```html
+<!-- ❌ BAD: backend ou nome errado -->
+<title>EcoFoco App</title>
+<form action="/api/contato" method="post">
+
+<!-- ✅ GOOD -->
+<title>Contato | Eco em Foco</title>
+<html lang="pt-BR">
+<form class="contact-form" aria-label="Formulário de contato">
+```

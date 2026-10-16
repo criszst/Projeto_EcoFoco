@@ -1,0 +1,29 @@
+---
+description: Validação nativa HTML5 em formulários — required, types, pattern e labels
+alwaysApply: true
+---
+
+# Formulários HTML5
+
+Validação só com atributos nativos (`required`, `type`, `pattern`, `min`/`max`, `minlength`). Sem JavaScript de validação. O site é estático: o envio é demonstração local, não grava nem despacha dados.
+
+- Todo controle tem `<label for="id">` apontando para o mesmo `id`.
+- Tipos: `email`, `tel`, `date`, `number`, `text`, `checkbox`. Telefone com `pattern` e `aria-describedby` para a dica.
+- Obrigatórios: `required` + `*` com `aria-hidden="true"`.
+- Feedback: `role="status"` e `aria-live="polite"`. Botão `type="submit"`.
+- Não use `alt` em `input`/`textarea`/`checkbox`; o rótulo já descreve o campo.
+
+```html
+<!-- ❌ BAD -->
+<input type="text" name="email" placeholder="email">
+<input type="tel" alt="Campo para telefone">
+
+<!-- ✅ GOOD -->
+<label for="email">E-mail <span aria-hidden="true">*</span></label>
+<input id="email" name="email" type="email" autocomplete="email" required>
+
+<label for="telefone">Telefone (opcional)</label>
+<input id="telefone" name="telefone" type="tel" pattern="[0-9()+ .-]{8,20}"
+       aria-describedby="telefone-ajuda">
+<small id="telefone-ajuda">Use números, espaço, parênteses, +, ponto ou hífen.</small>
+```

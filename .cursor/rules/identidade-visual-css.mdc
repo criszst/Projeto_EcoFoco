@@ -1,0 +1,33 @@
+---
+description: Identidade visual — paleta verde e terracota, tokens CSS e responsividade
+alwaysApply: true
+---
+
+# Identidade visual e CSS
+
+Paleta: verde (floresta/folha) e terracota para destaques. Um único arquivo: `css/styles.css`. Use as variáveis de `:root`; não invente cores soltas.
+
+| Token | Uso |
+|---|---|
+| `--forest` `#153b2d` / `--forest-deep` `#0e2b21` | fundos escuros, marca |
+| `--leaf` `#53785e` | apoio |
+| `--rust` `#b95d3f` | destaque / terracota |
+| `--lime` `#d2e16c` | ênfase clara, skip-link |
+| `--cream` `#f6f3e9` / `--paper` `#fffdf7` | fundo |
+| `--ink` `#1d3027` / `--muted` `#5b6d62` | texto |
+| `--serif` Fraunces / `--sans` DM Sans | títulos / corpo |
+| `--content` `1180px` | largura máxima |
+
+- Cabeçalho alinhado: `.header-inner` com flex (`space-between`, `align-items: center`).
+- Imagens: `max-width: 100%`. Layout fluido; não quebrar o menu entre páginas.
+- Foco: `outline: 3px solid #a14827` em `:focus-visible`.
+- Comentários no CSS explicam blocos (reset, header, etc.); mantenha esse estilo.
+
+```css
+/* ❌ BAD */
+h1 { color: #00ff00; font-family: Comic Sans MS; }
+
+/* ✅ GOOD */
+h1 { color: var(--forest); font-family: var(--serif); }
+.hero { max-width: var(--content); }
+```
