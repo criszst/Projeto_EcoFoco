@@ -1,11 +1,172 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <!-- Metadados básicos para idioma, adaptação a telas e descrição nos buscadores. -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Eco em Foco: educação sobre emissões de carbono, ambiente e impacto social."
+    />
+    <meta name="theme-color" content="#153b2d" />
+    <title>Sobre | Eco em Foco</title>
+    <!-- CSS compartilhado mantém identidade e comportamento consistentes nas dez páginas. -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!--
+    Aprendendo HTML:
+    - <a> cria um link. O atributo href="..." diz para onde ele leva.
+    - class="..." funciona como uma categoria: vários elementos podem ter a mesma classe e receber o mesmo estilo.
+    - id="..." identifica um elemento único, como um nome especial para esse bloco da página.
+    - aria-label="..." ajuda leitores de tela a entenderem o que o elemento faz.
+  --></head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+    <!-- Cabeçalho e navegação globais: o estado atual da página é anunciado por aria-current. -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Eco em Foco, página inicial"
+          ><span class="brand-mark" aria-hidden="true">e</span
+          ><span class="brand-text">eco em foco</span></a
+        >
+        <details class="mobile-nav" open>
+          <summary aria-label="Abrir menu de navegação">Menu</summary>
+          <nav
+            class="main-nav"
+            id="menu-principal"
+            aria-label="Navegação principal"
+          >
+            <a href="index.html">Início</a>
+            <a href="sobre.html" aria-current="page">Sobre</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="impacto.html">Impacto</a>
+            <a href="acessibilidade.html">Acessibilidade</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="midia.html">Mídia</a>
+            <a href="noticias.html">Notícias</a>
+            <a href="contato.html">Contato</a>
+            <a href="orcamento_hospedagem.html">Orçamento</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+    <!-- main fornece um único destino para o atalho de navegação por teclado. -->
+    <main id="conteudo">
+      <section class="page-hero">
+        <p class="eyebrow eyebrow-dark">01 / quem somos</p>
+        <h1>Informação para aproximar clima e vida cotidiana.</h1>
+        <p class="page-intro">
+          Eco em Foco é um projeto educativo fictício, criado para a atividade
+          de Front-End, sobre emissões de carbono, sustentabilidade e impacto
+          social.
+        </p>
+      </section>
+      <section class="section about-layout">
+        <div>
+          <p class="eyebrow eyebrow-dark">Nossa história</p>
+          <h2>Um projeto de sala de aula com perguntas do mundo real.</h2>
+        </div>
+        <div class="rich-copy">
+          <p>
+            O ponto de partida é uma pergunta: como falar de carbono sem
+            esquecer quem vive os efeitos das mudanças ambientais? O site reúne
+            indicadores públicos, explicações introdutórias e ideias que podem
+            ser discutidas em escolas e comunidades.
+          </p>
+          <p>
+            Não somos órgão de monitoramento, consultoria ou organização
+            executora. Os projetos descritos aqui são propostas educativas, não
+            resultados já realizados. Os dados vêm de fontes identificadas e são
+            apresentados com o ano correspondente.
+          </p>
+        </div>
+      </section>
+      <section class="section values-grid">
+        <article>
+          <span class="value-number">01</span>
+          <h3>Missão</h3>
+          <p>
+            Traduzir informações ambientais confiáveis em conteúdos
+            compreensíveis, acessíveis e úteis à participação social.
+          </p>
+        </article>
+        <article>
+          <span class="value-number">02</span>
+          <h3>Visão</h3>
+          <p>
+            Uma sociedade que compreende os limites do planeta e toma decisões
+            com justiça entre gerações e territórios.
+          </p>
+        </article>
+        <article>
+          <span class="value-number">03</span>
+          <h3>Valores</h3>
+          <p>
+            Ciência aberta, inclusão, responsabilidade, transparência sobre
+            limites e respeito às diferentes experiências.
+          </p>
+        </article>
+      </section>
+      <section class="section quote-panel">
+        <blockquote>
+          “Sustentabilidade também significa garantir condições para que todas
+          as pessoas possam viver com dignidade, segurança e voz.”
+        </blockquote>
+        <p>Princípio editorial do projeto Eco em Foco</p>
+      </section>
+      <section class="section two-column">
+        <div>
+          <p class="eyebrow eyebrow-dark">Como trabalhamos</p>
+          <h2>Contexto antes de conclusões.</h2>
+        </div>
+        <ul class="check-list">
+          <li>Informamos a fonte, a data e se o dado é medido ou projetado.</li>
+          <li>
+            Explicamos emissões e concentração atmosférica como conceitos
+            diferentes.
+          </li>
+          <li>
+            Apresentamos propostas como propostas — não como resultados
+            comprovados.
+          </li>
+          <li>
+            Consideramos acessibilidade, inclusão e justiça climática em todo o
+            conteúdo.
+          </li>
+        </ul>
+      </section>
+    </main>
+    <!-- Rodapé repetido oferece caminhos globais e identifica o caráter educativo do projeto. -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <a class="brand footer-brand" href="index.html"
+            ><span class="brand-mark" aria-hidden="true">e</span
+            ><span class="brand-text">eco em foco</span></a
+          >
+          <p>
+            Entender as emissões. Acompanhar o ambiente. Cuidar das pessoas.
+          </p>
+        </div>
+        <nav class="footer-links" aria-label="Navegação no rodapé">
+          <a href="index.html">Início</a>
+          <a href="sobre.html" aria-current="page">Sobre</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="impacto.html">Impacto</a>
+          <a href="acessibilidade.html">Acessibilidade</a>
+          <a href="galeria.html">Galeria</a>
+          <a href="midia.html">Mídia</a>
+          <a href="noticias.html">Notícias</a>
+          <a href="contato.html">Contato</a>
+          <a href="orcamento_hospedagem.html">Orçamento</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        Projeto acadêmico fictício de Front-End · conteúdo educativo com fontes
+        identificadas · dados consultados em 25/09/2026.
+      </div>
+    </footer>
+  </body>
 </html>
