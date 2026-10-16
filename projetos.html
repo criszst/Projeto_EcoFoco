@@ -1,11 +1,158 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projetos</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <!-- Metadados básicos para idioma, adaptação a telas e descrição nos buscadores. -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Eco em Foco: educação sobre emissões de carbono, ambiente e impacto social."
+    />
+    <meta name="theme-color" content="#153b2d" />
+    <title>Projetos | Eco em Foco</title>
+    <!-- CSS compartilhado mantém identidade e comportamento consistentes nas dez páginas. -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!--
+    Aprendendo HTML:
+    - <a> cria um link. O atributo href="..." diz para onde ele leva.
+    - class="..." funciona como uma categoria: vários elementos podem ter a mesma classe e receber o mesmo estilo.
+    - id="..." identifica um elemento único, como um nome especial para esse bloco da página.
+    - aria-label="..." ajuda leitores de tela a entenderem o que o elemento faz.
+  --></head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+    <!-- Cabeçalho e navegação globais: o estado atual da página é anunciado por aria-current. -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Eco em Foco, página inicial"
+          ><span class="brand-mark" aria-hidden="true">e</span
+          ><span class="brand-text">eco em foco</span></a
+        >
+        <details class="mobile-nav" open>
+          <summary aria-label="Abrir menu de navegação">Menu</summary>
+          <nav
+            class="main-nav"
+            id="menu-principal"
+            aria-label="Navegação principal"
+          >
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="projetos.html" aria-current="page">Projetos</a>
+            <a href="impacto.html">Impacto</a>
+            <a href="acessibilidade.html">Acessibilidade</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="midia.html">Mídia</a>
+            <a href="noticias.html">Notícias</a>
+            <a href="contato.html">Contato</a>
+            <a href="orcamento_hospedagem.html">Orçamento</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+    <!-- main fornece um único destino para o atalho de navegação por teclado. -->
+    <main id="conteudo">
+      <section class="page-hero">
+        <p class="eyebrow eyebrow-dark">02 / caminhos de ação</p>
+        <h1>Pequenas ações, mudanças estruturais e participação.</h1>
+        <p class="page-intro">
+          As iniciativas abaixo são ideias de aprendizagem e mobilização
+          comunitária — não programas que o site afirma já executar.
+        </p>
+      </section>
+      <section class="section project-grid">
+        <article class="project-card project-feature">
+          <span class="project-tag">PROPOSTA 01 · ESCOLA</span>
+          <div class="project-symbol" aria-hidden="true">◌</div>
+          <h2>Escola que mede e transforma</h2>
+          <p>
+            Mapear consumo de energia e resíduos da escola, divulgar os dados em
+            linguagem simples e cocriar metas realistas com estudantes,
+            funcionários e famílias.
+          </p>
+          <ul>
+            <li>Aprendizagem sobre emissões indiretas.</li>
+            <li>Participação de pessoas com deficiência nas decisões.</li>
+            <li>Relato periódico de ações e desafios.</li>
+          </ul>
+          <p class="impact-label">
+            Impacto esperado: alfabetização climática e corresponsabilidade.
+          </p>
+        </article>
+        <article class="project-card">
+          <span class="project-tag">PROPOSTA 02 · BAIRRO</span>
+          <div class="project-symbol" aria-hidden="true">↗</div>
+          <h2>Mobilidade para todas as pessoas</h2>
+          <p>
+            Auditar rotas a pé, pontos de ônibus e acesso à escola com
+            estudantes, moradores idosos e pessoas com deficiência; propor
+            melhorias à gestão local.
+          </p>
+          <p class="impact-label">
+            Conecta mobilidade de menor emissão à segurança, autonomia e acesso
+            a serviços.
+          </p>
+        </article>
+        <article class="project-card">
+          <span class="project-tag">PROPOSTA 03 · ALIMENTAÇÃO</span>
+          <div class="project-symbol" aria-hidden="true">⌁</div>
+          <h2>Comida, território e circularidade</h2>
+          <p>
+            Organizar uma feira educativa de agricultura familiar, alimentação
+            de época e compostagem, reconhecendo o trabalho de quem produz e
+            reduzindo desperdício.
+          </p>
+          <p class="impact-label">
+            Conecta consumo consciente, renda local, alimentação e cuidado do
+            solo.
+          </p>
+        </article>
+      </section>
+      <section class="section action-note">
+        <p class="eyebrow">Como avaliar</p>
+        <h2>Uma boa ideia acompanha também seus efeitos e seus limites.</h2>
+        <p>
+          Antes de declarar sucesso, é necessário combinar uma linha de base,
+          indicador, período de observação e participação das pessoas afetadas.
+          As propostas desta página ainda não têm resultados medidos.
+        </p>
+        <a class="button button-light" href="impacto.html"
+          >Ver como interpretamos indicadores
+          <span aria-hidden="true">↗</span></a
+        >
+      </section>
+    </main>
+    <!-- Rodapé repetido oferece caminhos globais e identifica o caráter educativo do projeto. -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <a class="brand footer-brand" href="index.html"
+            ><span class="brand-mark" aria-hidden="true">e</span
+            ><span class="brand-text">eco em foco</span></a
+          >
+          <p>
+            Entender as emissões. Acompanhar o ambiente. Cuidar das pessoas.
+          </p>
+        </div>
+        <nav class="footer-links" aria-label="Navegação no rodapé">
+          <a href="index.html">Início</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="projetos.html" aria-current="page">Projetos</a>
+          <a href="impacto.html">Impacto</a>
+          <a href="acessibilidade.html">Acessibilidade</a>
+          <a href="galeria.html">Galeria</a>
+          <a href="midia.html">Mídia</a>
+          <a href="noticias.html">Notícias</a>
+          <a href="contato.html">Contato</a>
+          <a href="orcamento_hospedagem.html">Orçamento</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        Projeto acadêmico fictício de Front-End · conteúdo educativo com fontes
+        identificadas · dados consultados em 25/09/2026.
+      </div>
+    </footer>
+  </body>
 </html>
