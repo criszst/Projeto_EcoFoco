@@ -27,7 +27,7 @@
           ><span class="brand-text">eco em foco</span></a
         >
         <details class="mobile-nav" open>
-          <summary aria-label="Abrir menu de navegação">Menu</summary>
+          <summary>Menu de navegação</summary>
           <nav
             class="main-nav"
             id="menu-principal"
@@ -46,7 +46,7 @@
         </details>
       </div>
     </header>
-    <main id="conteudo">
+    <main id="conteudo" tabindex="-1">
       <section class="hero" aria-labelledby="hero-title">
 
         <div class="hero-title">
@@ -65,19 +65,25 @@
         <figure class="hero-photo">
           <img
             src="https://commons.wikimedia.org/wiki/Special:FilePath/Renewable_Energy_on_the_Grid.jpg"
-            alt="paineis solares"
+            alt="Painéis solares e turbinas eólicas ligados à rede elétrica"
             width="886"
             height="621"
           />
           <figcaption>
             Energia solar e eólica são parte da transição — ao lado de
             eficiência, mobilidade e proteção social.
+            Wikimedia Commons —
+            <a
+              href="https://commons.wikimedia.org/wiki/File:Renewable_Energy_on_the_Grid.jpg"
+              >arquivo original</a
+            >.
           </figcaption>
         </figure>
 
-        <div class="hero-stamp" role="note" aria-label="conhecer para agir">
-          <span>01</span><span>entender<br />para agir</span>
-        </div>
+        <p class="hero-stamp">
+          <span aria-hidden="true">01</span
+          ><span>entender<br />para agir</span>
+        </p>
       </section>
       <section class="section intro-grid" aria-labelledby="intro-title">
         <div>
@@ -93,10 +99,12 @@
           e a capacidade de resposta são desiguais.
         </p>
       </section>
-      <section class="section dark-band">
+      <section class="section dark-band" aria-labelledby="clima-bairro-title">
         <div>
           <p class="eyebrow">Uma ideia simples</p>
-          <h2>Clima não é assunto distante. É qualidade de vida no bairro.</h2>
+          <h2 id="clima-bairro-title">
+            Clima não é assunto distante. É qualidade de vida no bairro.
+          </h2>
           <p>
             Conhecimento acessível ajuda pessoas e comunidades a participar das
             decisões que afetam seu território.
@@ -121,8 +129,9 @@
             <a
               href="https://wmo.int/resources/publication-series/greenhouse-gas-bulletin/wmo-greenhouse-gas-bulletin-no-21"
               target="_blank"
-              rel="noopener"
-              >OMM, Boletim de Gases de Efeito Estufa n.º 21 (2025)</a
+              rel="noopener noreferrer"
+              >OMM, Boletim de Gases de Efeito Estufa n.º 21 (2025)
+              <span class="visually-hidden">(abre em nova aba)</span></a
             >
             — concentração de 2024.
           </li>
@@ -130,8 +139,9 @@
             <a
               href="https://globalcarbonbudget.org/fossil-fuel-co2-emissions-hit-record-high-in-2025/"
               target="_blank"
-              rel="noopener"
-              >Global Carbon Project, Global Carbon Budget 2025</a
+              rel="noopener noreferrer"
+              >Global Carbon Project, Global Carbon Budget 2025
+              <span class="visually-hidden">(abre em nova aba)</span></a
             >
             — projeções de emissões para 2025.
           </li>
@@ -139,8 +149,9 @@
             <a
               href="https://wmo.int/publication-series/state-of-global-climate/state-of-global-climate-2025"
               target="_blank"
-              rel="noopener"
-              >OMM, State of the Global Climate 2025 (2026)</a
+              rel="noopener noreferrer"
+              >OMM, State of the Global Climate 2025 (2026)
+              <span class="visually-hidden">(abre em nova aba)</span></a
             >
             — temperatura global e extremos.
           </li>
@@ -156,7 +167,10 @@
     <footer class="site-footer">
       <div class="footer-inner">
         <div>
-          <a class="brand footer-brand" href="index.html"
+          <a
+            class="brand footer-brand"
+            href="index.html"
+            aria-label="Eco em Foco, página inicial"
             ><span class="brand-mark" aria-hidden="true">e</span
             ><span class="brand-text">eco em foco</span></a
           >
