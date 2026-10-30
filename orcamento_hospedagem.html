@@ -1,1 +1,281 @@
-
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <!-- Metadados básicos para idioma, adaptação a telas e descrição nos buscadores. -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Eco em Foco: educação sobre emissões de carbono, ambiente e impacto social."
+    />
+    <meta name="theme-color" content="#153b2d" />
+    <title>Orçamento | Eco em Foco</title>
+    <!-- CSS compartilhado mantém identidade e comportamento consistentes nas dez páginas. -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!--
+    Aprendendo HTML:
+    - <a> cria um link. O atributo href="..." diz para onde ele leva.
+    - class="..." funciona como uma categoria: vários elementos podem ter a mesma classe e receber o mesmo estilo.
+    - id="..." identifica um elemento único, como um nome especial para esse bloco da página.
+    - aria-label="..." ajuda leitores de tela a entenderem o que o elemento faz.
+  --></head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+    <!-- Cabeçalho e navegação globais: o estado atual da página é anunciado por aria-current. -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Eco em Foco, página inicial"
+          ><span class="brand-mark" aria-hidden="true">e</span
+          ><span class="brand-text">eco em foco</span></a
+        >
+        <details class="mobile-nav" open>
+          <summary aria-label="Abrir menu de navegação">Menu</summary>
+          <nav
+            class="main-nav"
+            id="menu-principal"
+            aria-label="Navegação principal"
+          >
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="impacto.html">Impacto</a>
+            <a href="acessibilidade.html">Acessibilidade</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="midia.html">Mídia</a>
+            <a href="noticias.html">Notícias</a>
+            <a href="contato.html">Contato</a>
+            <a href="orcamento_hospedagem.html" aria-current="page"
+              >Orçamento</a
+            >
+          </nav>
+        </details>
+      </div>
+    </header>
+    <!-- main fornece um único destino para o atalho de navegação por teclado. -->
+    <main id="conteudo">
+      <section class="page-hero">
+        <p class="eyebrow eyebrow-dark">09 / documentação do projeto</p>
+        <h1>Quanto pode custar publicar um site estático?</h1>
+        <p class="page-intro">
+          Comparativo didático para a atividade. Preços promocionais, prazos
+          mínimos e renovações aparecem separados, pois não representam a mesma
+          coisa.
+        </p>
+      </section>
+      <section class="section budget-note">
+        <strong>Consulta: 25/09/2026 · valores públicos em reais</strong>
+        <p>
+          O orçamento é uma fotografia de páginas comerciais sujeitas a
+          mudanças. Preços promocionais dependem de plano e prazo; antes de
+          contratar, confirmar o valor final no carrinho e as condições atuais.
+          Não constitui recomendação de compra.
+        </p>
+      </section>
+      <section class="section budget-table-wrap">
+        <div class="table-wrap">
+          <table>
+            <caption>
+              Comparação de planos básicos para um site estático com dez páginas
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Provedor e plano</th>
+                <th scope="col">Hospedagem no 1.º ciclo</th>
+                <th scope="col">Prazo e compromisso</th>
+                <th scope="col">Renovação da hospedagem</th>
+                <th scope="col">.com.br no 1.º ano</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Hostinger · Single</th>
+                <td>R$ 5,99/mês anunciado; R$ 287,52 no ciclo de 48 meses</td>
+                <td>
+                  48 meses pagos na contratação; equivalente calculado de R$
+                  71,88/ano, não uma opção anual.
+                </td>
+                <td>R$ 23,99/mês (R$ 287,88 se mantido por 12 meses).</td>
+                <td>
+                  R$ 1,00 na promoção; renovação do domínio divulgada a R$
+                  64,99/ano. Elegibilidade de domínio grátis no plano Single não
+                  confirmada.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Locaweb · Go</th>
+                <td>
+                  R$ 5,90/mês no primeiro ciclo; equivalente aritmético de R$
+                  70,80 por 12 meses.
+                </td>
+                <td>
+                  Plano anual, pagamento antecipado; R$ 70,80 é multiplicação do
+                  preço exibido, não total confirmado no carrinho.
+                </td>
+                <td>
+                  Não informado na página consultada; R$ 24,90/mês é preço cheio
+                  de referência, não renovação confirmada.
+                </td>
+                <td>
+                  Grátis por 12 meses com hospedagem anual; página lista R$
+                  64,90 como preço de referência, mas renovação não confirmada.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">KingHost · Hospedagem I</th>
+                <td>R$ 155,90 pelo primeiro ciclo anual promocional.</td>
+                <td>
+                  12 meses; página também exibe R$ 12,99/mês como equivalência.
+                </td>
+                <td>
+                  R$ 358,80/ano no preço regular divulgado; sujeito a reajuste e
+                  impostos conforme condições comerciais.
+                </td>
+                <td>
+                  R$ 26,90/ano se comprado separadamente; domínio grátis
+                  anunciado para extensões elegíveis, sem confirmação de que
+                  .com.br esteja incluído.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="small-note">
+          Como referência separada do Registro.br: R$ 40,00 para um ano de
+          domínio .br, incluindo .com.br, conforme sua página oficial de
+          pagamento. Esse valor não é tarifa dos provedores acima. As premissas
+          e limitações estão descritas nesta página.
+        </p>
+      </section>
+      <section class="section two-column">
+        <div>
+          <p class="eyebrow eyebrow-dark">O que escolher?</p>
+          <h2>Preço não é o único critério.</h2>
+        </div>
+        <div class="rich-copy">
+          <p>
+            Para uma página estática simples, compare espaço e tráfego,
+            certificado HTTPS, backup, suporte, requisitos de acessibilidade,
+            duração do desconto e custo para renovar. Hospedagem gratuita pode
+            servir a um protótipo; planos promocionais de longo prazo podem
+            exigir pagamento antecipado.
+          </p>
+          <p>
+            <strong>Orçamento recomendado para a atividade:</strong> usar
+            provisoriamente a referência de R$ 40/ano do Registro.br mais
+            hospedagem anual cujo valor total e renovação tenham sido
+            confirmados no checkout. A decisão real fica a cargo da equipe e do
+            professor; não é necessário comprar nada para concluir o protótipo.
+          </p>
+          <a
+            href="https://registro.br/ajuda/pagamento-de-dominio/"
+            target="_blank"
+            rel="noopener"
+            >Ver preços oficiais de domínios .br no Registro.br
+            <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+      <section class="section budget-sources">
+        <h2>Fontes oficiais consultadas</h2>
+        <ol>
+          <li>
+            <a
+              href="https://www.hostinger.com/br/hospedagem-de-sites"
+              target="_blank"
+              rel="noopener"
+              >Hostinger — hospedagem</a
+            >,
+            <a
+              href="https://www.hostinger.com/br/tld/dominio-com-br"
+              target="_blank"
+              rel="noopener"
+              >domínio .com.br</a
+            >
+            e
+            <a
+              href="https://www.hostinger.com/br/precos"
+              target="_blank"
+              rel="noopener"
+              >preços e renovação</a
+            >.
+          </li>
+          <li>
+            <a
+              href="https://www.locaweb.com.br/hospedagem-de-sites-com-dominio-gratis/"
+              target="_blank"
+              rel="noopener"
+              >Locaweb — hospedagem com domínio</a
+            >
+            e
+            <a
+              href="https://www.locaweb.com.br/registro-de-dominio-gratis/"
+              target="_blank"
+              rel="noopener"
+              >condições de domínio grátis</a
+            >.
+          </li>
+          <li>
+            <a
+              href="https://king.host/hospedagem-de-sites"
+              target="_blank"
+              rel="noopener"
+              >KingHost — hospedagem</a
+            >
+            e
+            <a
+              href="https://king.host/registro-de-dominio"
+              target="_blank"
+              rel="noopener"
+              >registro de domínio</a
+            >.
+          </li>
+          <li>
+            <a
+              href="https://registro.br/ajuda/pagamento-de-dominio/"
+              target="_blank"
+              rel="noopener"
+              >Registro.br — pagamento e registro</a
+            >.
+          </li>
+        </ol>
+        <p class="small-note">
+          Este comparativo foi pesquisado para atender ao enunciado escolar.
+          Todos os valores e promoções podem expirar ou mudar.
+        </p>
+      </section>
+    </main>
+    <!-- Rodapé repetido oferece caminhos globais e identifica o caráter educativo do projeto. -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <a class="brand footer-brand" href="index.html"
+            ><span class="brand-mark" aria-hidden="true">e</span
+            ><span class="brand-text">eco em foco</span></a
+          >
+          <p>
+            Entender as emissões. Acompanhar o ambiente. Cuidar das pessoas.
+          </p>
+        </div>
+        <nav class="footer-links" aria-label="Navegação no rodapé">
+          <a href="index.html">Início</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="impacto.html">Impacto</a>
+          <a href="acessibilidade.html">Acessibilidade</a>
+          <a href="galeria.html">Galeria</a>
+          <a href="midia.html">Mídia</a>
+          <a href="noticias.html">Notícias</a>
+          <a href="contato.html">Contato</a>
+          <a href="orcamento_hospedagem.html" aria-current="page">Orçamento</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        Projeto acadêmico fictício de Front-End · conteúdo educativo com fontes
+        identificadas · dados consultados em 25/09/2026.
+      </div>
+    </footer>
+  </body>
+</html>
