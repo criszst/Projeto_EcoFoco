@@ -1,11 +1,183 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acessibilidade</title>
-</head>
-<body>
-    
-</body>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <!-- Metadados básicos para idioma, adaptação a telas e descrição nos buscadores. -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Eco em Foco: educação sobre emissões de carbono, ambiente e impacto social."
+    />
+    <meta name="theme-color" content="#153b2d" />
+    <title>Acessibilidade | Eco em Foco</title>
+    <!-- CSS compartilhado mantém identidade e comportamento consistentes nas dez páginas. -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!--
+    Aprendendo HTML:
+    - <a> cria um link. O atributo href="..." diz para onde ele leva.
+    - class="..." funciona como uma categoria: vários elementos podem ter a mesma classe e receber o mesmo estilo.
+    - id="..." identifica um elemento único, como um nome especial para esse bloco da página.
+    - aria-label="..." ajuda leitores de tela a entenderem o que o elemento faz.
+  --></head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+    <!-- Cabeçalho e navegação globais: o estado atual da página é anunciado por aria-current. -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Eco em Foco, página inicial"
+          ><span class="brand-mark" aria-hidden="true">e</span
+          ><span class="brand-text">eco em foco</span></a
+        >
+        <details class="mobile-nav" open>
+          <summary aria-label="Abrir menu de navegação">Menu</summary>
+          <nav
+            class="main-nav"
+            id="menu-principal"
+            aria-label="Navegação principal"
+          >
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="impacto.html">Impacto</a>
+            <a href="acessibilidade.html" aria-current="page">Acessibilidade</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="midia.html">Mídia</a>
+            <a href="noticias.html">Notícias</a>
+            <a href="contato.html">Contato</a>
+            <a href="orcamento_hospedagem.html">Orçamento</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+    <!-- main fornece um único destino para o atalho de navegação por teclado. -->
+    <main id="conteudo">
+      <section class="page-hero">
+        <p class="eyebrow eyebrow-dark">04 / inclusão em primeiro lugar</p>
+        <h1>Um site sobre futuro precisa ser acessível agora.</h1>
+        <p class="page-intro">
+          A acessibilidade não é um recurso extra: orienta como organizamos
+          conteúdo, navegação, imagens, formulários e mídia.
+        </p>
+      </section>
+      <section class="section access-intro">
+        <div class="access-number" aria-hidden="true">A11Y</div>
+        <div>
+          <p class="eyebrow eyebrow-dark">Compromisso de projeto</p>
+          <h2>Mais autonomia</h2>
+          <p>
+            O site foi pensado para oferecer conteúdo textual claro, uso por
+            teclado e compatibilidade com tecnologias assistivas. A validação
+            automatizada ajuda, mas não substitui testes com pessoas com
+            deficiência.
+          </p>
+        </div>
+      </section>
+      <section class="section access-grid">
+        <article>
+          <span class="access-icon" aria-hidden="true">↹</span>
+          <h3>Teclado e foco</h3>
+          <p>
+            Links e controles seguem uma ordem de leitura lógica, foco visível e
+            atalho “Ir para o conteúdo”. O menu móvel pode ser aberto e fechado
+            pelo teclado.
+          </p>
+        </article>
+        <article>
+          <span class="access-icon" aria-hidden="true">◐</span>
+          <h3>Contraste e leitura</h3>
+          <p>
+            Texto e fundo usam cores com contraste forte, títulos descrevem a
+            hierarquia e os parágrafos priorizam frases diretas.
+          </p>
+        </article>
+        <article>
+          <span class="access-icon" aria-hidden="true">▧</span>
+          <h3>Imagens e tabelas</h3>
+          <p>
+            Imagens informativas têm texto alternativo; tabelas têm legenda e
+            cabeçalhos associados para orientar a leitura.
+          </p>
+        </article>
+        <article>
+          <span class="access-icon" aria-hidden="true">◖</span>
+          <h3>Áudio e vídeo</h3>
+          <p>
+            Controles são nativos e operáveis; apresentamos descrição textual do
+            que se vê/ouve e não iniciamos mídia automaticamente.
+          </p>
+        </article>
+        <article>
+          <span class="access-icon" aria-hidden="true">▤</span>
+          <h3>Formulários</h3>
+          <p>
+            Campos têm rótulos visíveis, instruções e validação nativa de
+            preenchimento, e-mail e formato de telefone.
+          </p>
+        </article>
+        <article>
+          <span class="access-icon" aria-hidden="true">Aa</span>
+          <h3>Preferências de movimento</h3>
+          <p>
+            O CSS reduz animações quando o sistema operacional informa
+            preferência por movimento reduzido.
+          </p>
+        </article>
+      </section>
+      <section class="section access-next">
+        <h2>Como continuar melhorando</h2>
+        <ol>
+          <li>Testar navegação completa usando somente teclado.</li>
+          <li>
+            Testar páginas e leitor de tela com participantes com diferentes
+            deficiências.
+          </li>
+          <li>
+            Validar cada HTML no Nu Html Checker e corrigir problemas
+            identificados.
+          </li>
+          <li>Revisar contraste e zoom em diferentes tamanhos de tela.</li>
+          <li>
+            Publicar um canal de contato acessível para relatar barreiras.
+          </li>
+        </ol>
+        <p class="small-note">
+          Este protótipo aplica boas práticas iniciais. Não declara conformidade
+          certificada com WCAG; a avaliação humana ainda é necessária.
+        </p>
+      </section>
+    </main>
+    <!-- Rodapé repetido oferece caminhos globais e identifica o caráter educativo do projeto. -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <a class="brand footer-brand" href="index.html"
+            ><span class="brand-mark" aria-hidden="true">e</span
+            ><span class="brand-text">eco em foco</span></a
+          >
+          <p>
+            Entender as emissões. Acompanhar o ambiente. Cuidar das pessoas.
+          </p>
+        </div>
+        <nav class="footer-links" aria-label="Navegação no rodapé">
+          <a href="index.html">Início</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="impacto.html">Impacto</a>
+          <a href="acessibilidade.html" aria-current="page">Acessibilidade</a>
+          <a href="galeria.html">Galeria</a>
+          <a href="midia.html">Mídia</a>
+          <a href="noticias.html">Notícias</a>
+          <a href="contato.html">Contato</a>
+          <a href="orcamento_hospedagem.html">Orçamento</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        Projeto acadêmico fictício de Front-End · conteúdo educativo com fontes
+        identificadas · dados consultados em 25/09/2026.
+      </div>
+    </footer>
+  </body>
 </html>
