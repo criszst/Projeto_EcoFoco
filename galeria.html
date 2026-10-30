@@ -1,11 +1,172 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <!-- Metadados básicos para idioma, adaptação a telas e descrição nos buscadores. -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Eco em Foco: educação sobre emissões de carbono, ambiente e impacto social."
+    />
+    <meta name="theme-color" content="#153b2d" />
+    <title>Galeria | Eco em Foco</title>
+    <!-- CSS compartilhado mantém identidade e comportamento consistentes nas dez páginas. -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!--
+    Aprendendo HTML:
+    - <a> cria um link. O atributo href="..." diz para onde ele leva.
+    - class="..." funciona como uma categoria: vários elementos podem ter a mesma classe e receber o mesmo estilo.
+    - id="..." identifica um elemento único, como um nome especial para esse bloco da página.
+    - aria-label="..." ajuda leitores de tela a entenderem o que o elemento faz.
+  --></head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+    <!-- Cabeçalho e navegação globais: o estado atual da página é anunciado por aria-current. -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Eco em Foco, página inicial"
+          ><span class="brand-mark" aria-hidden="true">e</span
+          ><span class="brand-text">eco em foco</span></a
+        >
+        <details class="mobile-nav" open>
+          <summary aria-label="Abrir menu de navegação">Menu</summary>
+          <nav
+            class="main-nav"
+            id="menu-principal"
+            aria-label="Navegação principal"
+          >
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="impacto.html">Impacto</a>
+            <a href="acessibilidade.html">Acessibilidade</a>
+            <a href="galeria.html" aria-current="page">Galeria</a>
+            <a href="midia.html">Mídia</a>
+            <a href="noticias.html">Notícias</a>
+            <a href="contato.html">Contato</a>
+            <a href="orcamento_hospedagem.html">Orçamento</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+    <!-- main fornece um único destino para o atalho de navegação por teclado. -->
+    <main id="conteudo">
+      <section class="page-hero">
+        <p class="eyebrow eyebrow-dark">05 / galeria</p>
+        <h1>Uma transição justa também é feita de pessoas.</h1>
+        <p class="page-intro">
+          Imagens de energia renovável e ação comunitária. As legendas
+          identificam o que aparece e dão crédito a quem produziu cada imagem.
+        </p>
+      </section>
+      <section class="section gallery-grid">
+        <figure class="gallery-item gallery-wide">
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Renewable_Energy_on_the_Grid.jpg"
+            alt="Painéis fotovoltaicos, turbinas eólicas e linhas de transmissão no mesmo horizonte."
+            width="886"
+            height="621"
+            loading="lazy"
+          />
+          <figcaption>
+            <strong>Energia solar e eólica conectadas à rede.</strong
+            ><span
+              >Kenueone, via Pixabay/Wikimedia Commons · CC0 1.0.
+              <a
+                href="https://commons.wikimedia.org/wiki/File:Renewable_Energy_on_the_Grid.jpg"
+                target="_blank"
+                rel="noopener"
+                >Ver arquivo e licença</a
+              >.</span
+            >
+          </figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Tree_Planting_Event_4_26_14_III_%28cropped%29.jpg"
+            alt="Grupo de voluntários participa de atividade de plantio de árvores em um campo aberto."
+            width="2337"
+            height="1912"
+            loading="lazy"
+          />
+          <figcaption>
+            <strong>Plantio coletivo de árvores, 2014.</strong
+            ><span
+              >Montgomery County Planning Commission, via Wikimedia Commons · CC
+              BY-SA 2.0.
+              <a
+                href="https://commons.wikimedia.org/wiki/File:Tree_Planting_Event_4_26_14_III_(cropped).jpg"
+                target="_blank"
+                rel="noopener"
+                >Ver arquivo e licença</a
+              >.</span
+            >
+          </figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Planting_trees.jpg"
+            alt="Voluntários plantam mudas para apoiar a biodiversidade e a conservação do ecossistema."
+            width="5000"
+            height="3333"
+            loading="lazy"
+          />
+          <figcaption>
+            <strong>Plantio de árvores para biodiversidade, 2014.</strong
+            ><span
+              >John Englart (Takver), via Wikimedia Commons · CC BY-SA 2.0.
+              <a
+                href="https://commons.wikimedia.org/wiki/File:Planting_trees.jpg"
+                target="_blank"
+                rel="noopener"
+                >Ver arquivo e licença</a
+              >.</span
+            >
+          </figcaption>
+        </figure>
+      </section>
+      <section class="section gallery-note">
+        <h2>Uso educativo e créditos</h2>
+        <p>
+          As imagens são apresentadas com atribuição e links para as páginas de
+          origem e licenças. O enquadramento na galeria pode ser adaptativo na
+          tela; os arquivos originais estão na pasta <code>img/</code> do
+          pacote.
+        </p>
+      </section>
+    </main>
+    <!-- Rodapé repetido oferece caminhos globais e identifica o caráter educativo do projeto. -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <a class="brand footer-brand" href="index.html"
+            ><span class="brand-mark" aria-hidden="true">e</span
+            ><span class="brand-text">eco em foco</span></a
+          >
+          <p>
+            Entender as emissões. Acompanhar o ambiente. Cuidar das pessoas.
+          </p>
+        </div>
+        <nav class="footer-links" aria-label="Navegação no rodapé">
+          <a href="index.html">Início</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="impacto.html">Impacto</a>
+          <a href="acessibilidade.html">Acessibilidade</a>
+          <a href="galeria.html" aria-current="page">Galeria</a>
+          <a href="midia.html">Mídia</a>
+          <a href="noticias.html">Notícias</a>
+          <a href="contato.html">Contato</a>
+          <a href="orcamento_hospedagem.html">Orçamento</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        Projeto acadêmico fictício de Front-End · conteúdo educativo com fontes
+        identificadas · dados consultados em 25/09/2026.
+      </div>
+    </footer>
+  </body>
 </html>
