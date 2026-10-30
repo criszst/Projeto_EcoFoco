@@ -1,11 +1,179 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noticias</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <!-- Metadados básicos para idioma, adaptação a telas e descrição nos buscadores. -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Eco em Foco: educação sobre emissões de carbono, ambiente e impacto social."
+    />
+    <meta name="theme-color" content="#153b2d" />
+    <title>Notícias | Eco em Foco</title>
+    <!-- CSS compartilhado mantém identidade e comportamento consistentes nas dez páginas. -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!--
+    Aprendendo HTML:
+    - <a> cria um link. O atributo href="..." diz para onde ele leva.
+    - class="..." funciona como uma categoria: vários elementos podem ter a mesma classe e receber o mesmo estilo.
+    - id="..." identifica um elemento único, como um nome especial para esse bloco da página.
+    - aria-label="..." ajuda leitores de tela a entenderem o que o elemento faz.
+  --></head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+    <!-- Cabeçalho e navegação globais: o estado atual da página é anunciado por aria-current. -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Eco em Foco, página inicial"
+          ><span class="brand-mark" aria-hidden="true">e</span
+          ><span class="brand-text">eco em foco</span></a
+        >
+        <details class="mobile-nav" open>
+          <summary aria-label="Abrir menu de navegação">Menu</summary>
+          <nav
+            class="main-nav"
+            id="menu-principal"
+            aria-label="Navegação principal"
+          >
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="impacto.html">Impacto</a>
+            <a href="acessibilidade.html">Acessibilidade</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="midia.html">Mídia</a>
+            <a href="noticias.html" aria-current="page">Notícias</a>
+            <a href="contato.html">Contato</a>
+            <a href="orcamento_hospedagem.html">Orçamento</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+    <!-- main fornece um único destino para o atalho de navegação por teclado. -->
+    <main id="conteudo">
+      <section class="page-hero">
+        <p class="eyebrow eyebrow-dark">07 / atualizações e leituras</p>
+        <h1>O que mudou no retrato global do clima?</h1>
+        <p class="page-intro">
+          Notas editoriais sobre relatórios científicos recentes. Cada resumo
+          leva à publicação original para conferência e leitura completa.
+        </p>
+      </section>
+      <section class="section news-list">
+        <article class="news-card">
+          <div class="news-date"><span>23</span><span>MAR 2026</span></div>
+          <div>
+            <p class="eyebrow eyebrow-dark">Estado do clima</p>
+            <h2>2015–2025: os onze anos mais quentes do registro</h2>
+            <p>
+              A OMM afirma que 2025 foi o segundo ou terceiro ano mais quente,
+              com temperatura média global de aproximadamente 1,43 °C acima de
+              1850–1900. Eventos extremos afetaram comunidades e economias em
+              várias regiões.
+            </p>
+            <a
+              href="https://wmo.int/publication-series/state-of-global-climate/state-of-global-climate-2025"
+              target="_blank"
+              rel="noopener"
+              >Ler o relatório da OMM <span aria-hidden="true">↗</span></a
+            >
+            <p class="small-note">
+              Fonte publicada em 2026; valor aproximado e comparação dependem do
+              conjunto de dados utilizado.
+            </p>
+          </div>
+        </article>
+        <article class="news-card">
+          <div class="news-date"><span>13</span><span>NOV 2025</span></div>
+          <div>
+            <p class="eyebrow eyebrow-dark">Orçamento de carbono</p>
+            <h2>Emissões fósseis de CO₂ projetadas em recorde para 2025</h2>
+            <p>
+              O Global Carbon Project estimou 38,1 bilhões de toneladas de CO₂
+              fóssil em 2025. O relatório também estima separadamente as
+              emissões associadas à mudança no uso da terra; são categorias
+              diferentes e não devem ser confundidas.
+            </p>
+            <a
+              href="https://globalcarbonbudget.org/fossil-fuel-co2-emissions-hit-record-high-in-2025/"
+              target="_blank"
+              rel="noopener"
+              >Ler o resumo do Global Carbon Project
+              <span aria-hidden="true">↗</span></a
+            >
+            <p class="small-note">
+              Projeção elaborada durante 2025; consulte a publicação e eventuais
+              revisões para dados definitivos.
+            </p>
+          </div>
+        </article>
+        <article class="news-card">
+          <div class="news-date"><span>16</span><span>OUT 2025</span></div>
+          <div>
+            <p class="eyebrow eyebrow-dark">Gases de efeito estufa</p>
+            <h2>Concentrações atmosféricas atingiram novos máximos em 2024</h2>
+            <p>
+              O boletim da OMM informou concentração média de CO₂ de 423,9 ± 0,2
+              ppm em 2024. O número é uma medida da atmosfera global, não uma
+              contagem das emissões de um único ano.
+            </p>
+            <a
+              href="https://wmo.int/resources/publication-series/greenhouse-gas-bulletin/wmo-greenhouse-gas-bulletin-no-21"
+              target="_blank"
+              rel="noopener"
+              >Ler o boletim da OMM <span aria-hidden="true">↗</span></a
+            >
+            <p class="small-note">
+              Publicado em outubro de 2025 com dados atmosféricos de 2024.
+            </p>
+          </div>
+        </article>
+      </section>
+      <section class="section news-footer">
+        <h2>Por que mostramos o ano?</h2>
+        <p>
+          Relatórios são publicados depois do período de medição, e projeções
+          podem mudar. Cada resumo informa a data ou o ano para que o leitor não
+          confunda a atualização da notícia com o período observado.
+        </p>
+        <a class="arrow-link" href="impacto.html"
+          >Comparar indicadores e limitações
+          <span aria-hidden="true">→</span></a
+        >
+      </section>
+    </main>
+    <!-- Rodapé repetido oferece caminhos globais e identifica o caráter educativo do projeto. -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <a class="brand footer-brand" href="index.html"
+            ><span class="brand-mark" aria-hidden="true">e</span
+            ><span class="brand-text">eco em foco</span></a
+          >
+          <p>
+            Entender as emissões. Acompanhar o ambiente. Cuidar das pessoas.
+          </p>
+        </div>
+        <nav class="footer-links" aria-label="Navegação no rodapé">
+          <a href="index.html">Início</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="impacto.html">Impacto</a>
+          <a href="acessibilidade.html">Acessibilidade</a>
+          <a href="galeria.html">Galeria</a>
+          <a href="midia.html">Mídia</a>
+          <a href="noticias.html" aria-current="page">Notícias</a>
+          <a href="contato.html">Contato</a>
+          <a href="orcamento_hospedagem.html">Orçamento</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        Projeto acadêmico fictício de Front-End · conteúdo educativo com fontes
+        identificadas · dados consultados em 25/09/2026.
+      </div>
+    </footer>
+  </body>
 </html>
