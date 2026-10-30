@@ -1,11 +1,178 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Midia</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <!-- Metadados básicos para idioma, adaptação a telas e descrição nos buscadores. -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Eco em Foco: educação sobre emissões de carbono, ambiente e impacto social."
+    />
+    <meta name="theme-color" content="#153b2d" />
+    <title>Mídia | Eco em Foco</title>
+    <!-- CSS compartilhado mantém identidade e comportamento consistentes nas dez páginas. -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!--
+    Aprendendo HTML:
+    - <a> cria um link. O atributo href="..." diz para onde ele leva.
+    - class="..." funciona como uma categoria: vários elementos podem ter a mesma classe e receber o mesmo estilo.
+    - id="..." identifica um elemento único, como um nome especial para esse bloco da página.
+    - aria-label="..." ajuda leitores de tela a entenderem o que o elemento faz.
+  --></head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+    <!-- Cabeçalho e navegação globais: o estado atual da página é anunciado por aria-current. -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Eco em Foco, página inicial"
+          ><span class="brand-mark" aria-hidden="true">e</span
+          ><span class="brand-text">eco em foco</span></a
+        >
+        <details class="mobile-nav" open>
+          <summary aria-label="Abrir menu de navegação">Menu</summary>
+          <nav
+            class="main-nav"
+            id="menu-principal"
+            aria-label="Navegação principal"
+          >
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="projetos.html">Projetos</a>
+            <a href="impacto.html">Impacto</a>
+            <a href="acessibilidade.html">Acessibilidade</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="midia.html" aria-current="page">Mídia</a>
+            <a href="noticias.html">Notícias</a>
+            <a href="contato.html">Contato</a>
+            <a href="orcamento_hospedagem.html">Orçamento</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+    <!-- main fornece um único destino para o atalho de navegação por teclado. -->
+    <main id="conteudo">
+      <section class="page-hero">
+        <p class="eyebrow eyebrow-dark">06 / escutar, assistir, compreender</p>
+        <h1>Conteúdo climático em mais de um formato.</h1>
+        <p class="page-intro">
+          Vídeo, áudio e uma fonte externa incorporada. Os controles são manuais
+          e cada mídia tem uma descrição em texto.
+        </p>
+      </section>
+      <section class="section media-layout">
+        <article class="media-card">
+          <div class="media-heading">
+            <p class="eyebrow eyebrow-dark">Vídeo · demonstração</p>
+            <h2>Como gira uma turbina eólica</h2>
+          </div>
+          <div class="video-frame">
+            <iframe
+              width="100%"
+              height="315"
+              src="https://www.youtube.com/embed/V6lyCuw7VfU"
+              title="Como gira uma turbina eólica"
+              loading="lazy"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p class="transcript">
+            <strong>Descrição:</strong> vídeo sobre o funcionamento e o
+            movimento de uma turbina eólica. O conteúdo original está hospedado
+            no YouTube.
+          </p>
+        </article>
+        <article class="media-card audio-card">
+          <div class="media-heading">
+            <p class="eyebrow eyebrow-dark">Áudio · demonstração</p>
+            <h2>Ambiente de floresta</h2>
+          </div>
+          <audio controls>
+            <source
+              src="Music/ElevenLabs_Ambiente_pacífico_da_natureza_no_início_da_manhã_com_canto_suave_de_pássaros_ao_longe_Farfalhar_sua.mp3"
+              type="audio/mpeg"
+            />
+            Seu navegador não suporta áudio HTML5.
+          </audio>
+          <p class="transcript">
+            <strong>Descrição do áudio:</strong> gravação de ambiente com sons
+            naturais, sem narração.
+          </p>
+        </article>
+      </section>
+      <section class="section embed-section">
+        <div>
+          <p class="eyebrow eyebrow-dark">Fonte externa · OMM</p>
+          <h2>O que mostram as medições de gases de efeito estufa?</h2>
+          <p>
+            Vídeo oficial da Organização Meteorológica Mundial sobre o Boletim
+            de Gases de Efeito Estufa.
+          </p>
+          <iframe
+            width="100%"
+            height="420"
+            src="https://www.youtube.com/embed/AEhu4DYG6AI"
+            title="Vídeo da OMM sobre gases de efeito estufa"
+            loading="lazy"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+      <section class="section small-note">
+        Descrições textuais e créditos acompanham os elementos; as fotos e
+        fontes originais estão indicadas na página
+        <a href="galeria.html">Galeria</a>.
+      </section>
+    </main>
+    <!-- Rodapé repetido oferece caminhos globais e identifica o caráter educativo do projeto. -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <a class="brand footer-brand" href="index.html"
+            ><span class="brand-mark" aria-hidden="true">e</span
+            ><span class="brand-text">eco em foco</span></a
+          >
+          <p>
+            Entender as emissões. Acompanhar o ambiente. Cuidar das pessoas.
+          </p>
+        </div>
+        <nav class="footer-links" aria-label="Navegação no rodapé">
+          <a href="index.html">Início</a>
+          <a href="sobre.html">Sobre</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="impacto.html">Impacto</a>
+          <a href="acessibilidade.html">Acessibilidade</a>
+          <a href="galeria.html">Galeria</a>
+          <a href="midia.html" aria-current="page">Mídia</a>
+          <a href="noticias.html">Notícias</a>
+          <a href="contato.html">Contato</a>
+          <a href="orcamento_hospedagem.html">Orçamento</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        Projeto acadêmico fictício de Front-End · conteúdo educativo com fontes
+        identificadas · dados consultados em 25/09/2026.
+      </div>
+    </footer>
+  </body>
 </html>
