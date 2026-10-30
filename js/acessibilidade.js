@@ -39,12 +39,37 @@
   function updateReading(active) {
     readButton.setAttribute('aria-pressed', String(active));
     readButton.querySelector('.read-label').textContent = active ? 'Parar leitura' : 'Ler página';
+    readButton.title = active ? 'Parar leitura' : 'Ler página';
+  }
+
+  let readingId = 0;
+  let reading = false;
+
+  function stopReading() {
+    reading = false;
+    readingId++;
+    speech.cancel();
+    updateReading(false);
+  }
+
+  function splitText(text) {
+    const words = text.replace(/\s+/g, ' ').trim().split(' ');
+    const parts = [];
+    let part = '';
+    for (const word of words) {
+      if (part && (part.length + word.length + 1 > 160 || /[.!?]$/.test(part))) {
+        parts.push(part);
+        part = '';
+      }
+      part += (part ? ' ' : '') + word;
+    }
+    if (part) parts.push(part);
+    return parts;
   }
 
   readButton.addEventListener('click', () => {
-    if (readButton.getAttribute('aria-pressed') === 'true') {
-      speech.cancel();
-      updateReading(false);
+    if (reading) {
+      stopReading();
       return;
     }
     const main = document.querySelector('main');
@@ -53,12 +78,22 @@
     copy.querySelectorAll('script, style, nav, button, input, textarea, select, iframe, video, audio, [aria-hidden="true"]').forEach(el => el.remove());
     const content = copy.innerText || copy.textContent;
     if (!content.trim()) return;
-    speech.cancel();
-    const utterance = new SpeechSynthesisUtterance(content.replace(/\s+/g, ' ').trim());
-    utterance.lang = document.documentElement.lang || 'pt-BR';
-    utterance.onend = utterance.onerror = () => updateReading(false);
+    stopReading();
+    const parts = splitText(content);
+    const currentId = readingId;
+    let index = 0;
+    reading = true;
     updateReading(true);
-    speech.speak(utterance);
+    const speakNext = () => {
+      if (!reading || currentId !== readingId) return;
+      if (index >= parts.length) { stopReading(); return; }
+      const utterance = new SpeechSynthesisUtterance(parts[index++]);
+      utterance.lang = document.documentElement.lang || 'pt-BR';
+      utterance.onend = speakNext;
+      utterance.onerror = () => { if (currentId === readingId) stopReading(); };
+      speech.speak(utterance);
+    };
+    speakNext();
   });
-  window.addEventListener('pagehide', () => speech.cancel());
+  window.addEventListener('pagehide', stopReading);
 })();
