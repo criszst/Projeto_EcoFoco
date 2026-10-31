@@ -1,9 +1,9 @@
 ## Assunto
 
- Site educativo sobre sustentabilidade emissoes de carbono e impacto social.
+Site educativo sobre sustentabilidade emissoes de carbono e impacto social.
 
- Link para o site público: 
- <a href="https://ecofoco.up.railway.app/">Site do Projeto "Eco Foco"</a>
+Link para o site público:
+<a href="https://ecofoco.up.railway.app/">Site do Projeto "Eco Foco"</a>
 
 ## Equipe
 
@@ -24,18 +24,18 @@ envolve inclusão, acessibilidade e participação social.
 
 ### Objetivos
 
-Criar um site educativo, acessivel e resposivel 
+Criar um site educativo, acessivel e resposivel
 
 ### Mapa do site
 
-Todas as paginas dão acesso ao menu principal e ao rodapé com links de navegação.
+Todas as páginas dão acesso ao menu principal e ao rodapé com links de navegação.
 
 ### Tecnologia e ferramentas
 
 - HTML5
 - CSS
 - VALIDAÇÃO NATIVA DE FORMULARIOS HTML5, COM ATRIBUTOS COMO: required. type="email", type="tel", type="date",
-type="number" e pattern.
+  type="number" e pattern.
 - VS CODE
 - MICROSOFT EDGE PARA TESTES LOCAIS.
 - VERIFICAÇÕES ESTRUTURAIS E VISUAIS DO PROJETO.
@@ -45,17 +45,18 @@ type="number" e pattern.
 - Acessibilidade
 - Sustentabilidade
 - Responsividade
-- Seo Basico
+- SEO Básico
 
 ### Identidade Visual e conteúdo
 
-- A paleta combina com tons de verde e terracota, usado para destacar sonhos e elementos, o tom de voz é educativo, direto e colhedor. 
+- A paleta combina com tons de verde e terracota, usado para destacar sonhos e elementos, o tom de voz é educativo, direto e colhedor.
 
 O logotipo textual "Eco em Foco" aparece no cabeçalho e rodapé.
 
 Imagens e materias tem creditos ou link para suas fontes nas páginas correspondentes.
 
-### Critérios de aceitção 
+### Critérios de aceitção
+
 - O formulário apresenta validação HTML 5
 - A imagem tem texto alternativo e fontes identificadas
 - A navegação pode ser realizada pelo teclado.
@@ -64,7 +65,7 @@ Imagens e materias tem creditos ou link para suas fontes nas páginas correspond
 
 Site institucional estático, sem banco de dados e sem integrações complexas.
 
-GitHub Pages - Netlify - Versel
+GitHub Pages - Railway
 
 ### Verificações realizadas
 
@@ -73,25 +74,24 @@ GitHub Pages - Netlify - Versel
 - Logo e menu alinhado corretamente;
 - Estrutura HTML e recursos básicos.
 
-### Etapa 1 - Planejamento 
+### Etapa 1 - Planejamento
 
 - Definir as cores base do site, verde lesbico e terracota;
-- Organização dos HTMLS
+- Organização dos HTMLS;
 - Prioriza a organização visual.
 
 ### Etapa 2 - Construção do layout
 
-- Criação de cabeçalho, navegação e rodapé
-- Ajuste do alinhamento.
-- Buscamos inconsistencias entre a pagina
+- Criação de cabeçalho, navegação e rodapé;
+- Ajuste do alinhamento;
+- Buscamos inconsistências entre a página.
 
 ### Etapa 3 - Conteudo e acessibilidade
 
-- Textos educativos e explicativos.
-- Pretendo adicionar audio e um leitor para o site
+- Textos educativos e explicativos;
+- Pretendemos adicionar leitor de tela e botão para alterar o contraste
 
-### Etapa 4 - Ajustes  finais 
+### Etapa 4 - Ajustes finais
 
 - Correção de menu que estava torto.
-- Adicionamos um arquivo music em "assets/", para implementação de audio futuramente.
-
+- Adicionamos um arquivo music em "Music/", para a implementação de áudio

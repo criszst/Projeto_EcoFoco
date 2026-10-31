@@ -11,6 +11,23 @@
   const speech = window.speechSynthesis;
   const storageKey = 'eco-foco-alto-contraste';
 
+  // O botão do VLibras fica em uma shadow root, fora do alcance do CSS global.
+  function enlargeVlibrasButton() {
+    const button = window.VLibrasWidget?.initBtn;
+    if (!button) return false;
+    button.style.transform = 'scale(1.2)';
+    button.style.transformOrigin = 'right center';
+    return true;
+  }
+
+  if (!enlargeVlibrasButton()) {
+    const vlibrasObserver = new MutationObserver(() => {
+      if (enlargeVlibrasButton()) vlibrasObserver.disconnect();
+    });
+    vlibrasObserver.observe(document.body, { childList: true, subtree: true });
+    window.addEventListener('pagehide', () => vlibrasObserver.disconnect(), { once: true });
+  }
+
   try {
     if (localStorage.getItem(storageKey) === 'true') {
       document.documentElement.classList.add('high-contrast');
