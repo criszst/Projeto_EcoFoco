@@ -8,8 +8,6 @@ Link para o site público:
 ## Equipe
 
 Adrian Crisitan dos Santos - RGM: 47567210
-Cicero Kauê Alvez da Silva - RGM: 48225096
-Emylly Nickolly Viana de Oliveira - RGM: 47642785
 Larissa Penha Francisco. - RGM: 48065960
 Maria Fernanda Martins Vaz - RGM: 47598964
 
