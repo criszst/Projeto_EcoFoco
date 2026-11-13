@@ -1549,6 +1549,7 @@ code {
   .hero {
     grid-template-columns: 1fr;
     min-height: unset;
+    max-height: none;
   }
 
   .hero-copy {
